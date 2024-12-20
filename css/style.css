@@ -1,0 +1,207 @@
+/* fonts .................................*/
+.montserrat {
+  font-family: "Montserrat", serif;
+}
+.montserrat-l {
+  font-family: "Montserrat", serif;
+  font-weight: 600;
+  font-size: 16px;
+}
+.montserrat {
+  font-family: "Montserrat", serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.montserrat-sm {
+  font-family: "Montserrat", serif;
+  font-weight: 700;
+  font-size: 36px;
+}
+.dancing-script-xm {
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  font-size: 26px;
+}
+.dancing-script-l {
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  font-size: 90px;
+}
+/* fonts .................................*/
+body {
+  background-image: url(../Images/background.jpg);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #000;
+}
+/* navbar................................ */
+.bg-body-transperent {
+  backdrop-filter: blur(3px);
+}
+nav {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.306);
+}
+/* navbar................................ */
+/* home-search................................ */
+.shadow-xl {
+  box-shadow: 0 1rem 3rem rgb(0 0 0 / 53%) !important;
+}
+form {
+  backdrop-filter: blur(15px);
+}
+.location{
+  backdrop-filter: blur(15px);
+}
+.search .form-control {
+  display: block;
+  width: 100%;
+  padding: 15px 0px 15px 60px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--bs-body-color);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  background-clip: padding-box;
+  border: 2px solid rgba(255, 255, 255, 0.306);
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.search .form-control:focus {
+  border-color: #000;
+  box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.25);
+  background-color: transparent;
+}
+
+.search button {
+  position: absolute;
+  top: 53px;
+  right: 53px;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important ;
+}
+
+.search .btn {
+  font-family: "Montserrat", serif;
+  border: 1px #212529 solid;
+  border-bottom-right-radius: 18px;
+  border-bottom-left-radius: 18px;
+  font-weight: 600;
+}
+
+.search i {
+  position: absolute;
+  top: 60px;
+  left: 57px;
+  color: rgba(255, 255, 255, 0.306);
+}
+/* home-search................................ */
+/* home-weather-box................................ */
+.weather-box {
+  color: white;
+  backdrop-filter: blur(15px);
+}
+.day-2 {
+  border-left: rgba(255, 255, 255, 0.306) solid 1px;
+  border-right: rgba(255, 255, 255, 0.306) solid 1px;
+}
+/* home-weather-box................................ */
+/* footer................................ */
+.footer form{
+    background-color: white;
+}
+.footer .btn {
+  font-family: "Montserrat", serif;
+  border-bottom-right-radius: 18px;
+  border-bottom-left-radius: 18px;
+  font-weight: 600;
+}
+.footer span {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: white;
+  color: #000;
+  text-align: center;
+  line-height: 2;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  font-size: 20px;
+  font-size: 1.4285;
+}
+.footer .form-control {
+    display: block;
+    width: 100%;
+    padding: 15px 0px 15px 60px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--bs-body-color);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    background-clip: padding-box;
+    border: 2px solid rgba(255, 255, 255, 0.306);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  .footer .form-control:focus {
+    border-color: #000;
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
+    background-color: transparent;
+  }
+  
+  .footer button {
+    position: absolute;
+    top: 53px;
+    right: 53px;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important ;
+  }
+/* footer................................ */
+
+@media (max-width: 992px){
+    .row{
+        flex-direction: column;
+    }
+    .p-sm-5{
+        padding: 30px 25px !important;
+    }
+    .day-2 {
+        border-left: rgba(255, 255, 255, 0.306) solid 0px;
+        border-right: rgba(255, 255, 255, 0.306) solid 0px;
+        border-top: rgba(255, 255, 255, 0.306) solid 1px;
+        border-bottom: rgba(255, 255, 255, 0.306) solid 1px;
+    }
+   
+    .footer .form-control {
+       
+        padding: 15px;
+       
+     }
+     .footer form{
+        padding: 20px 8px !important;
+     }
+     .footer button {
+        position: absolute;
+        top: 27px;
+        right: 13px;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important ;
+    }
+    .btn-p{
+        padding: 10px 10px !important;
+        font-size: 14px;
+    }
+    
+}

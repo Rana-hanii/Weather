@@ -115,16 +115,10 @@ searchInput.addEventListener("input", () => {
   weather(searchInput.value);
 });
 
-<<<<<<< HEAD
 // clearInputs.addEventListener("click", () => {
 //   searchInput.value = "";
 // });
 
-=======
-clearInputs.addEventListener("click", () => {
-  searchInput.value = "";
-});
->>>>>>> f72bff7250cea4ee669b7ab7263042f225ce4d8e
 //   Search****
 weather("Alexandria");
 

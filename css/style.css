@@ -205,6 +205,7 @@ form {
     }
     
 }
+<<<<<<< HEAD
 
 @media (max-width: 576px) {
   .search i {
@@ -217,3 +218,5 @@ form {
     font-size: 14px;
   }
 }
+=======
+>>>>>>> f72bff7250cea4ee669b7ab7263042f225ce4d8e

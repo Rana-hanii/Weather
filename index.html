@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="css/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <!-- .............. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- navbar.................................................... -->
+    <nav class="navbar navbar-expand-lg bg-body-transperent shadow-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="Images/logo.png" alt="logo"></a>
+            <div class="logo-text">
+                <h4 class="montserrat fs-4 m-0 text-white">Weather</h4>
+                <p class="montserrat m-0 text-white">tagline goes here</p>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item p-3">
+                        <a class="nav-link active montserrat-l text-white" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item p-3">
+                        <a class="nav-link montserrat-l text-white" href="#">News</a>
+                    </li>
+                    <li class="nav-item p-3">
+                        <a class="nav-link montserrat-l text-white" href="#">live Camera</a>
+                    </li>
+                    <li class="nav-item p-3">
+                        <a class="nav-link montserrat-l text-white" href="#">photos</a>
+                    </li>
+                    <li class="nav-item p-3">
+                        <a class="nav-link montserrat-l text-white" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar.................................................... -->
+    <!-- Home....................................................... -->
+    <section>
+        <div class="container">
+            <div class="search">
+                <form class="d-flex my-3  mx-auto rounded-bottom-5 shadow-xl p-5 my-5" role="search">
+                    <i class="fa-solid fa-magnifying-glass-location fs-2 text-dark "></i>
+                    <input id="searchInput" class="form-control position-relative w-75 mx-auto" type="search" placeholder="Enter your city name..."
+                        aria-label="Search">
+                    <!-- <button id="clearInputs" class="btn btn-outline-dark px-4 montserrat-l" type="button">Search</button> -->
+                </form>
+            </div>
+            <div class="location w-100 mx-auto  text-center mx-auto rounded-5 shadow-xl p-2 py-4 mb-5">
+                <button id="getLocation" class="btn btn-outline-dark w-75 rounded-4 py-2 montserrat-l fs-5" type="button">Find your location</button>
+                <p class="bg-dark p-3 my-2 rounded-4 mx-4 shadow-lg text-light montserrat d-none text-center" id="output"><i class="fa-solid fa-circle-info fs-6 px-2"></i>Press allow to access your location </p>
+            </div>
+            <div class="row weather-box my-2 mx-auto rounded-top-5 shadow-xl p-5 mb-4">
+                <div class="days col-12 col-lg-4 px-5 p-sm-5">
+                    <div class="head d-flex justify-content-between">
+                        <p id="dayOneName" class="day montserrat-l">Sunday</p>
+                        <p id="dayOneDate" class="date montserrat-l">12 DEC</p>
+                    </div>
+                    <div class="content">
+                        <div id="city" class="location montserrat-sm text-danger">Alexandria</div>
+                        <div id="dayOneTemp" class="degree dancing-script-l text-warning">18.5<sup>o</sup>C</div>
+                        <!-- <i class="fa-solid fa-moon fs-3" style="color: #74C0FC;"></i> -->
+                        <img id="dayOneTempIcon" src="" alt="icon">
+                        <div id="dayOneDesc" class="desc montserrat-l my-4 text-primary fs-5">clear</div>
+                        <div class="icons text-center">
+                            <i class="fa-solid fa-umbrella me-3 fs-3">
+                                <p id="dayOneRain" class="dancing-script-xm py-2">20%</p>
+                            </i>
+                            <i class="fa-solid fa-wind mx-3 fs-3">
+                                <p id="dayOneWind" class="dancing-script-xm py-2">18 km/h</p>
+                            </i>
+                            <i class="fa-solid fa-compass mx-3 fs-3">
+                                <p id="dayOneCompass" class="dancing-script-xm py-2">East</p>
+                            </i>
+                        </div>
+                    </div>
+                </div>
+                <div class="day-2 col-12 col-lg-4 px-5 text-center  p-sm-5 ">
+                    <div class="head d-flex justify-content-between">
+                        <p id="dayTwoName" class="day montserrat-l">Sunday</p>
+                        <p id="dayTwoDate" class="date montserrat-l">12 DEC</p>
+                    </div>
+                    <div class="content my-5">
+                        <!-- <i class="fa-solid fa-sun fs-1 my-5" style="color: #FFD43B;"></i> -->
+                        <img id="dayTwoIcon" src="" alt="icon">
+                        <div id="maxTempTwo" class="degree dancing-script-xm text-warning fs-1">18.5<sup>o</sup>C</div>
+                        <div id="minTempTwo" class="degree dancing-script-xm text-warning fs-1">18.5<sup>o</sup>C</div>
+                        <div id="dayTwoDesc" class="desc montserrat-l my-3 text-primary fs-5">Sunny</div>
+                    </div>
+                </div>
+                <div class="days col-12 col-lg-4 px-5 text-center  p-sm-5">
+                    <div class="head d-flex justify-content-between">
+                        <p id="dayThreeName" class="day montserrat-l">Sunday</p>
+                        <p id="dayThreeDate" class="date montserrat-l">12 DEC</p>
+                    </div>
+                    <div class="content my-5">
+                        <!-- <i class="fa-solid fa-cloud-sun-rain fs-1 my-5" style="color: #08c;"></i> -->
+                        <img id="dayThreeIcon" src="" alt="icon">
+                        <div id="maxTempThree" class="degree dancing-script-xm text-warning fs-1">18.5<sup>o</sup>C
+                        </div>
+                        <div id="minTempThree" class="degree dancing-script-xm text-warning fs-1">18.5<sup>o</sup>C
+                        </div>
+                        <div id="dayThreeDesc" class="desc montserrat-l my-3 text-primary fs-5">Cloudy</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Home....................................................... -->
+    <!-- footer.................................................... -->
+    <section>
+        <div class="container footer my-5">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <form class="d-flex my-5  mx-auto rounded-bottom-5 shadow-lg p-5 .p-sm-5" role="search">
+                        <input class="form-control position-relative" type="search"
+                            placeholder="Enter your email to subscribe..." aria-label="Subscribe">
+                        <button class="btn btn-outline-dark px-4 btn-p " type="submit">Subscribe</button>
+                    </form>
+                </div>
+                <div class="col-12 col-lg-6 text-center my-auto">
+                    <span><i class="fa-brands fa-facebook-f"></i></span>
+                    <span><i class="fa-brands fa-twitter"></i></span>
+                    <span><i class="fa-brands fa-google-plus-g"></i></span>
+                    <span><i class="fa-brands fa-pinterest-p"></i></span>
+                </div>
+                <p class="montserrat text-center text-white my-4">Copyright 2025. Designed by Rana_Hani. All
+                    rights reserved</p>
+            </div>
+        </div>
+    </section>
+    <!-- footer.................................................... -->
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
